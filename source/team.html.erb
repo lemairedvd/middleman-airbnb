@@ -8,8 +8,15 @@ title: Le Wagon - Middleman - Team
     <ul class="list-inline text-center">
       <% ["kaikuenne", "lemairedvd"].each do |gh_username| %>
         <li>
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{gh_username}", class: "img-circle" %>
-          <h2><%= gh_username.capitalize %></h2>
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{gh_username}" , class: "img-circle" %>
+          <br>
+          <% if gh_username == "kaikuenne" %>
+          <h2><%= "Kai" %></h2>
+          <% else %>
+          <h2><%= "David" %></h2>
+          <% end %>
+          <br>
+          <i class="fa fa-github""></i>
           <%= link_to "#{gh_username}", "https://github.com/#{gh_username}" %>
         </li>
       <% end %>
